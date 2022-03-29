@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PAC SNACK</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>PAC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="starter">
+                <h1 id="starterHeader">Starters</h1>
+            </section>
+            <section id="main">
+                <h1 id="mainHeader">Main</h1>
+            </section>
+            <section id="dessert">
+                <h1 id="dessertHeader">Dessert</h1>
+            </section>
+            <section id="drinks">
+                <h1 id="drinksHeader">Drinks</h1>
+            </section>
+            <section id="sideorders">
+                <h1 id="sideordersHeader">Sideorders</h1>
+            </section>
+        </main>
+        <div class="overlay">
+            <article class="olArticle">
+                <div class="closeBtn" onclick="openCloseOverlay()">X</div>
+                <img class="olPic" src="" alt="">
+                <div id="prodDescCont">
+                    <h1 class="olName"></h1>
+                    <p class="longDesc"></p>
+                </div>
+                <div id="alcAndAllCont">
+                    <ul id="allergens">
+                        <h2>Allergens</p>
+                    </ul>
+                    <div class="filters" id="alcohol">
+                        <h2>Alcohol</h2>
+                        <p></p>
+                    </div>
+                    <div class="filters" id="vegetarian">
+                        <h2>Vegetarian</h2>
+                        <p></p>
+                    </div>
+                    <div class="filters" id="region">
+                        <h2>Region</h2>
+                        <p></p>
+                    </div>
+                    <div class="filters" id="stars">
+                        <h2>Stars</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="priceContOl">
+                    <p class="priceOl"></p>
+                    <p class="newPriceOl"></p>
+                </div>
+                <div class="olBtn" id="olBtn">BUY</div>
+            </article>
+        </div>
+        <template id="dish">
+            <article class="dishArt">
+                <img id="" class="pic" src="" alt="" onclick="openCloseOverlay(id)"></img>
+                <h1 class="name"></h1>
+                <p class="shortDesc"></p>
+                <div class="priceCont">
+                    <p class="price"></p>
+                    <p class="newPrice"></p>
+                </div>
+                <div class="Btn">BUY</div>
+                <p id="soldOutText">Sold out</p>
+            </article>
+        </template>
+    </body>
+</html>
+<script src="script.js"></script>

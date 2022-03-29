@@ -1,0 +1,328 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url('res/fonts/Oxygen-Regular.ttf')  format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Oxygen Bold';
+    src: url('res/fonts/Oxygen-Bold.ttf')  format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Oxygen Light';
+    src: url('res/fonts/Oxygen-Light.ttf')  format('truetype');
+  }
+
+/* major changes */
+
+* {
+    margin: 0px;
+    text-decoration: none;
+    font-family: 'Oxygen';
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+}
+
+/* working on the header */
+
+header {
+    background-color: white;
+    height: 100px;
+    grid-row: 1 / 2;
+    display: flex;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+header h1 {
+    margin-right: auto;
+    font-size: 64px;
+    margin-left: 30px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    font-size: 24px;
+    flex-direction: row;
+}
+
+li {
+    margin-right: 30px;
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+nav a:active {
+    color: #afafaf;
+}
+
+/* working on main */
+
+main {
+    grid-row: 2 / -2;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4FC;
+}
+
+#starter, #main, #dessert, #drinks, #sideorders {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+#starter>h1, #main>h1, #dessert>h1, #drinks>h1, #sideorders>h1 {
+    grid-column: 1/-1;
+}
+
+.pic {
+    margin-top: 20px;
+    object-fit: cover;
+    height: 200px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+#soldOutText {
+    display: none;
+    position: relative;
+    font-size: 32pt;
+    width: 100%;
+    bottom: 360px;
+    text-align: center;
+    color:white;
+    text-shadow: 2px 2px #444444;
+    user-select: none;
+}
+
+/* article design */
+
+section>h1 {
+    font-family: 'Oxygen Bold';
+    font-size: 24pt;
+}
+
+section>h1::first-letter {
+    font-size: 32pt;
+}
+
+.dishArt {
+    height: 470px;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.4);
+}
+
+article>h1 {
+    margin: 40px 20px 0 20px;
+    font-size: 16pt;
+}
+
+.shortDesc {
+    margin: 20px 20px;
+    font-family: 'Oxygen Light';
+    height: 20px;
+}
+
+.priceCont {
+    display: flex;
+    margin: 0 20px;
+    font-family: 'Oxygen Bold';
+    font-size: 22pt;
+}
+
+.newPrice {
+    color: red;
+    margin-left: 20px;
+}
+
+.Btn {
+    user-select: none;
+    position: relative;
+    font-size: 24pt;
+    width: 150px;
+    font-family: 'Oxygen Bold';
+    background-color: #F4F4FC;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.Btn:hover, .olBtn:hover, .closeBtn:hover {
+    background-color: #adadad;
+}
+
+.Btn:active, .olBtn:active, .closeBtn:active {
+    background-color: #5f5f5f;
+    color: white;
+}
+
+/* overlay */
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.olArticle {
+    height: 60%;
+    width: 60%;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.4);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 7% auto;
+}
+
+.closeBtn {
+    user-select: none;
+    background-color: #f4f4fc;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 16pt;
+    line-height: 40px;
+    text-align: center;
+    grid-column-start: 4;
+    grid-row: 1/2;
+    margin-right: 20px;
+    margin-top: 20px;
+    justify-self: end;
+}
+
+.olBtn {
+    user-select: none;
+    font-size: 24pt;
+    width: 200px;
+    font-family: 'Oxygen Bold';
+    background-color: #F4F4FC;
+    text-align: center;
+    border-radius: 20%;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    grid-column: 3/5;
+    grid-row-start: 3;
+}
+
+.olBtn2 {
+    user-select: none;
+    font-size: 24pt;
+    width: 200px;
+    font-family: 'Oxygen Bold';
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 20%;
+    cursor: initial;
+    align-self: center;
+    justify-self: center;
+    grid-column: 3/5;
+    grid-row-start: 3;
+}
+
+.olPic {
+    margin-top: 20px;
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    border-radius: 2%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+#prodDescCont {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+#allergens {
+    display: inline-block;
+}
+
+#alcAndAllCont {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#alcAndAllCont h2 {
+    font-size: 20pt;
+}
+
+#allergens>li {
+    margin: 10px 30px;
+}
+
+.filters {
+    margin-left: 2.5em;
+}
+
+.filters p {
+    font-size: 16pt;
+}
+
+.priceContOl {
+    grid-column: 3/5;
+    grid-row-start: 3;
+}
+
+.priceContOl {
+    display: flex;
+    margin: 0 20px;
+    font-family: 'Oxygen Bold';
+    font-size: 22pt;
+    justify-self: center;
+}
+
+.newPriceOl {
+    color: red;
+    margin-left: 20px;
+}
+
+/* working on footer */
+
+footer {
+    grid-row: -2 / -1;
+}

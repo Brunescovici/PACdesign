@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'IBM Plex Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+}
+
+body {
+    margin: 0;
+    display: grid;
+}
+
+@media only screen and (min-width: 970px) {
+    
+    body {
+        grid-template-columns: 15fr 1fr;
+        grid-template-areas:
+            "hd nv"
+            "mn nv"
+            "ev nv"
+            "ft ft";
+    } 
+    .HD h1 {
+        font-size: 5.5em;
+    }
+li a {
+    display: block;
+    margin: 0;
+    width: 5em;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+.Note {
+    position: absolute;
+    margin: 0;
+    margin-left: 10em;
+    bottom: 1em;
+    right: 1em;
+    padding: 0.5em;
+    color: #d1fff6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    background-color: #737367;
+}
+    .Info {
+    position: absolute;
+    color: #e0e0e0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4em;
+    margin:0;
+    top: 0;
+    margin-top: 3em;
+    margin-left: 0.8em;
+}
+    .BG {
+    object-fit: cover;
+    height: 25em;
+}
+    .Evolution {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 969px)
+{
+    body {
+        grid-template-columns: 15fr 1fr;
+        grid-template-areas:
+            "hd hd"
+            "mn nv"
+            "ev nv"
+            "ft ft";
+    } 
+    .Note {
+    margin: 0;
+    bottom: 1em;
+    right: 1em;
+    padding: 0.5em;
+    color: #d1fff6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    background-color: #737367;
+    }
+    .Info {
+    position: absolute;
+    color: #e0e0e0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4em;
+    margin:0;
+    margin-top: 7em;
+    margin-left: 0.8em;
+    top: 0;
+}
+    .BG {
+    object-fit: cover;
+    height: 40em;
+}
+    .HD h1 {
+        font-size: 4em;
+    }
+    .Evolution {
+        width: 80%;
+    }
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #666666;
+    grid-area: hd;
+}
+
+.HeaderList {
+    position: relative;
+    display: inline-block;
+    background-color: #B3A1A1;
+    padding: 2em 0.3em;
+    border: 0.1em solid #8d7b7b;
+    border-radius: 25%;
+}
+    
+.NavList {
+    padding: 0.3em;
+}
+
+li a {
+    display: block;
+    margin: 0;
+    width: 5em;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+.HeaderList a:link {
+    color: #008826;
+}
+
+.HeaderList a:visited {
+    color: #000000;
+}
+
+.HeaderList a:hover {
+    color: #00d63c;
+}
+
+.HeaderList a:active {
+    color: #00ff47;
+}
+
+.NavList a:link {
+    color: #bababa;
+}
+
+.NavList a:visited {
+    color: #003bff;
+}
+
+.NavList a:hover {
+    color: #e6e6e6;
+}
+
+.NavList a:active {
+    color: #ffffff;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+}
+    
+ol {
+    margin: 0;
+    list-style-type:circle;
+    text-align: left;
+    background-color: #333333;
+    height: 100%;
+}
+    
+nav {
+    grid-area: nv;
+}
+    
+main {
+    grid-area: mn;
+}
+
+.HD {
+    margin:0;
+    position: relative;
+    text-align: center;
+}
+
+.HD h1 {
+    position: absolute;
+    color: #e0e0e0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.figBG {
+    margin: 0;
+    position: relative;
+    text-align: left;
+}
+    
+.SecInfo {
+    background-color: #B3B3B3;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0.7em;
+}
+    
+
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    padding: 0.1em;
+    background-color: #c5d1c5;
+}
+
+q {
+    font-style: italic;
+}
+
+.First_Structure p {
+    padding: 0.7em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4em;
+    margin: 0;
+    background-color: #B3B3B3;
+}
+
+footer {
+    grid-area: ft;
+}
+
+.Evolution {
+    grid-area: ev;
+}
+

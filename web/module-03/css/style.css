@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Bariol;
+    max-width: 100vw;
+    z-index: 1;
+}
+
+nav {
+    background: #7f44f8;
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    box-shadow: 0 0 10px 0;
+}
+
+label.Logo {
+    color: white;
+    font-size: 3.6em;
+    padding: 0 1em;
+    line-height: 1.34em;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 1em;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 5em;
+    margin: 0 1.3em;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.5em;
+}
+
+a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 1em;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+a.active::before, a:hover::before {
+    width: 100%;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 2.7em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+}
+
+.checkbtn2 {
+    font-size: 35px;
+    color: white;
+    float: right;
+    line-height: 2.3em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+}
+
+.CMod {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    float: right;
+    line-height: 2.7em;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.CMod2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    float: right;
+    line-height: 2.7em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#CamModes {
+    display: none;
+}
+
+main {
+    position: relative;
+    top: 5em;
+    z-index: -1;
+    align-self: center;
+}
+
+main h1{
+    position: relative;
+    font-size: 10em;
+    padding: 0 0.1em;
+    color: white;
+    background-color: #7f44f8;
+    text-align: center;
+    font-weight: normal;
+}
+
+#Cam_def {
+    font-size: 1.6em;
+    margin: 2em 25em;
+    padding: 1em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#Mod_def {
+    font-size: 1.6em;
+    margin: 2em 25em;
+    padding: 1em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.ImgText p{
+    grid-area: itp;
+    position: relative;
+    align-self: center;
+    font-size: 1.5em;
+    padding: 34.4px;
+    border: 2px solid black;
+}
+
+.ImgText img{
+    grid-area: iti;
+    position: relative;
+    width: 35em;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em;
+    margin: 1em 0;
+}
+
+#olMod li {
+    margin-top: 2.5em;
+}
+
+.ImgText{
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 1fr 4.5fr 1fr;
+    grid-template-areas: '. itp . iti .';
+}
+
+#ML_def {
+    grid-area: dslr_def;
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 34.4px;
+    border: 2px solid black;
+}
+
+.JImg_par {
+    grid-area: jipar;
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 34.4px;
+    border: 2px solid black;
+}
+
+.JImg {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas: '. dslr_def .'
+}
+
+.JImg2 {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas: '. jipar .'
+}
+
+.Modes {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#CamModes:checked ~ .Modes {
+    display: block;
+}
+
+#CamModes:checked ~ .CMod {
+    display: none;
+}
+
+#CamModes:checked ~ .CMod2 {
+    display: block;
+}
+
+figure img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24em;
+}
+
+figure {
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 2em;
+}
+
+#ISO_def {
+    font-size: 1.6em;
+    margin: 4em 17em;
+    padding: 1em;
+    border-left: 2px solid #7f44f8;
+    border-right: 2px solid #7f44f8;
+}
+
+.FF_info {
+    font-size: 1.6em;
+    margin: 4em 17em;
+    padding: 1em;
+    border-left: 2px solid #7f44f8;
+    border-right: 2px solid #7f44f8;
+}
+
+@media only screen and (max-width:1440px) {
+    .ImgText{
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-areas: '. iti .'
+            '.itp .';
+    }
+    label.Logo {
+        padding: 0 0.5em;
+    }
+    #Cam_def {
+        font-size: 1.5em;
+        margin: 2em;
+    }
+    #Mod_def {
+        font-size: 1.5em;
+        margin: 2em;
+    }
+    .checkbtn {
+        display: block;
+    }
+    .checkbtn2 {
+        display: none;
+    }
+    ul {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #583b91;
+        right: -105%;
+        text-align: center;
+        transition: all .5s;
+    }
+    figure img {
+        margin-left: 0.5em;
+        width: 18em;
+    }
+    figure {
+        font-size: 1.5em;
+    }
+    nav ul li {
+        display: block;
+        margin: 0 35vw;
+    }
+    main h1{
+        font-size: 5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    #olMod li {
+        margin-top: 5em;
+    }
+    .ImgText p{
+        font-size: 1.5em;
+        margin: 1em;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    #ML_def {
+        font-size: 1.5em;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    .JImg_par {
+        font-size: 1.4em;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    .ImgText img {
+        width: 100%;
+    }
+    #check:checked ~ ul {
+        right: -1em;
+    }
+    #check:checked ~ .checkbtn{
+        display: none;
+    }
+    #check:checked ~ .checkbtn2{
+        display: block;
+    }
+    #ISO_def {
+        font-size: 1.2em;
+        margin: 4em 2em;
+        padding: 1em;
+        border-left: 2px solid #7f44f8;
+        border-right: 2px solid #7f44f8;
+    }
+    .FF_info {
+        font-size: 1.2em;
+        margin: 4em 2em;
+        padding: 1em;
+        border-left: 2px solid #7f44f8;
+        border-right: 2px solid #7f44f8;
+    }
+}

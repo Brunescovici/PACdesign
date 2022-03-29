@@ -1,0 +1,210 @@
+/* general rules here */
+
+@font-face {
+    font-family: Adelle_B;
+    src: url(Adelle_B.ttf);
+}
+
+@font-face {
+    font-family: Adelle_T;
+    src: url(Adelle_T.ttf);
+}
+
+h2, h3 {
+    font-family: Adelle_B;
+}
+
+h1 {
+    margin:0;
+    font-family: Rockwell, bold;
+    font-size: 45;
+    color: #B22000;
+    background-color: #441D0E;
+}
+
+.One {
+    background-color: #B78977;
+    padding-top:20px;
+}
+
+.Three {
+    background-color: #D45B2C;
+    padding-top:20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Fourth {
+    background-color: #E5928D;
+    margin:0;
+    padding-top: 20px;
+}
+
+.Fifth {
+    background-color: #270B06;
+    margin:0;
+    padding-top: 20px;
+}
+
+.Sixth {
+    background-color: #C44346;
+    margin:0;
+    padding-top: 20px;
+}
+
+.Seventh {
+    background-color: #280B06;
+    margin:0;
+    padding-top: 20px;
+}
+
+.Eighth {
+    background-color: #D37274;
+    margin:0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    color: #DD4E45;
+}
+
+.Subtitle {
+    border: 6px solid #873A1C;
+    margin:auto;
+    margin-top: 60px;
+    width: 288px;
+    height: 40px;
+    background-color: #E7D8D2;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+}
+
+h3 {
+    color: #D45B2C;
+}
+
+h1 i {
+    color: #F6D3D0;
+}
+
+p {
+    font-family: Adelle_T;
+    color: #B22000;
+    font-size: 16;
+}
+
+.FirstP {
+    background-color: #E7D8D2;
+    width:226px;
+    height: 145px;
+    margin:0;
+    color: #B22000;
+    font-size: 11px;
+}
+
+.SecondP {
+    background-color: #E7D8D2;
+    width: 400px;
+}
+
+.ThirdP {
+    background-color: #E7D8D2;
+    width: 400px;
+}
+
+.FourthP{
+    background-color: #F6DED5;
+    width: 336px;
+    height: 180px;
+    padding: 10px;
+    margin:0 auto;
+    border-radius: 10px;
+    border: 1px solid #707070;
+}
+
+.FirstD {
+    background-color: #873A1C;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.SecondD{
+    background-color: #B78977;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ThirdD{
+    background-color: #E7D8D2;
+    padding-top: 20px;
+}
+
+.circlebg {
+    border: 5px solid #873A1C;
+    margin:0px auto;
+    width: 287px;
+    height: 287px;
+    background-color: #E5B98D;
+    border-radius: 143.5px;
+}
+
+.circlebg p {
+    color: #DD4E45;
+    font-size: 15px;
+    padding-left: 20px;
+    height: 360px;
+    position: relative;
+    top: 20%;
+}
+
+p cite {
+    font-family: Adelle_B;
+}
+
+p strong {
+    font-family: Adelle_B;
+}
+
+blockquote {
+    font-family: Adelle_B;
+    color: #D45B2C;
+}
+
+blockquote cite {
+    font-family: Adelle_T;
+}
+
+img {
+    display: block;
+    margin:0 auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 300px;;
+}
+
+.Name {
+    background-color: #F6DBD9;
+    width: 200px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.Longer {
+    width: 336px;
+    height: 360px;
+    padding: 10px;
+    margin:0 auto;
+    border-radius: 25px;
+    color: #BF9F74;
+    background-color: #652C15;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* very specific rules here */
+
+/* media specific rules here */

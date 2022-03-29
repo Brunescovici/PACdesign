@@ -1,0 +1,473 @@
+@font-face {
+    font-family: DoND;
+    src: url("../Asset/Fonts/DoND.ttf");
+}
+
+@font-face {
+    font-family: Bellota;
+    src: url("../Asset/Fonts/Bellota.ttf");
+}
+
+
+* {
+    margin: 0;
+}
+
+#logo a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Background*/
+
+body, html {
+    height: 100%;
+}
+
+main {
+    background-image: url("../Asset/Background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#bg_gradient {
+    background-image: url("../Asset/Gradient.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#stars {
+    background-image: url("../Asset/Stars.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#logo_container {
+    display: flex;
+    user-select: none;
+    position: absolute;
+    float: left;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+#logo {
+    font-family: DoND;
+    font-size: 70px;
+    cursor: pointer;
+    left: 15px;
+    position: relative;
+}
+
+#Aboutme {
+    float: right;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-family: Bellota;
+    color: white;
+    font-size: 30px;
+}
+
+#Aboutme:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Planet {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+}
+
+#First_Planet {
+    background-image: url("../Asset/Planet_1.png");
+    height: 304px;
+    width: 304px;
+    top: 25vh;
+    left: 13vw;
+    transition: transform .3s;
+}
+
+#P_blur_1 {
+    background-image: url("../Asset/First_P_blur.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 304px;
+    width: 304px;
+    top: 25vh;
+    left: 13vw;
+    filter: blur(30px);
+    transition: transform .3s;
+}
+
+#Second_Planet {
+    background-image: url("../Asset/Planet_2.png");
+    height: 404px;
+    width: 404px;
+    top: 12vh;
+    right: 14vw;
+    transition: transform .3s;
+}
+
+#P_blur_2 {
+    background-image: url("../Asset/Second_P_blur.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 404px;
+    width: 404px;
+    top: 12vh;
+    right: 14vw;
+    filter: blur(30px);
+    transition: transform .3s;
+}
+
+#Third_Planet {
+    background-image: url("../Asset/Planet_3.png");
+    height: 350px;
+    width: 350px;
+    top: 60vh;
+    right: 22vw;
+    transition: transform .3s;
+}
+
+#P_blur_3 {
+    background-image: url("../Asset/Third_P_blur.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 60vh;
+    right: 22vw;
+    filter: blur(30px);
+    transition: transform .3s;
+}
+
+#Fourth_Planet {
+    background-image: url("../Asset/Planet_4.png");
+    height: 275px;
+    width: 275px;
+    top: 55vh;
+    left: 30vw;
+    transition: transform .3s;
+}
+
+#P_blur_4 {
+    background-image: url("../Asset/Fourth_P_blur.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 275px;
+    width: 275px;
+    top: 55vh;
+    left: 30vw;
+    filter: blur(30px);
+    transition: transform .3s;
+}
+
+/*Paragraphs*/
+
+p {
+    font-family: Bellota;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+}
+
+#basic_web {
+    color: #7EAB2C;
+    line-height: 304px;
+    font-weight: bold;
+}
+
+#ux {
+    line-height: 404px;
+    color: #FF7C4A;
+    font-weight: bold;
+}
+
+#ux_m {
+    display: none;
+}
+
+#anim {
+    line-height: 350px;
+    color: #1D5FF2;
+    font-weight: bold;
+}
+
+#cont_p {
+    font-size: 22PX;
+    line-height: 275px;
+    color: #00C738;
+    font-weight: bold;
+}
+
+/*Planets Hover*/
+
+#First_Planet:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#P_blur_1:hover {
+    transform: scale(1.1);
+}
+
+#Second_Planet:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#P_blur_2:hover {
+    transform: scale(1.1);
+}
+
+#Third_Planet:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#P_blur_3:hover {
+    transform: scale(1.1);
+}
+
+#Fourth_Planet:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#P_blur_4:hover {
+    transform: scale(1.1);
+}
+
+/*Animations*/
+
+.breathing {
+    animation: breathing_kf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+.TransIn1 {
+    animation: TransIn1_kf;
+    animation-duration: 3s;
+    transition-timing-function: ease-out;
+}
+
+.TransIn2 {
+    animation: TransIn2_kf;
+    animation-duration: 6s;
+    transition-timing-function: ease-out;
+}
+
+/*Keyframes*/
+
+@keyframes breathing_kf {
+    0% {
+        opacity: 60%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes TransIn1_kf {
+    0% {
+        opacity: 0;
+        transform:translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes TransIn2_kf {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Media queries*/
+
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+    #First_Planet {
+        top: 25vh;
+        left: 10vw;
+    }
+    
+    #P_blur_1 {
+        top: 25vh;
+        left: 10vw;
+    }
+    
+    #Second_Planet {
+        top: 12vh;
+        right: 10vw;
+    }
+    
+    #P_blur_2 {
+        top: 12vh;
+        right: 10vw;
+    }
+    
+    #Third_Planet {
+        top: 60vh;
+        right: 20vw;
+    }
+    
+    #P_blur_3 {
+        top: 60vh;
+        right: 20vw;
+    }
+    
+    #Fourth_Planet {
+        top: 65vh;
+        left: 8vw;
+    }
+    
+    #P_blur_4 {
+        top: 65vh;
+        left: 8vw;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    main {
+        position: fixed;
+        width: 100%;
+        overflow-y: auto;
+    }
+    #stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    #logo_container {
+        width: 100%;
+        left: 0;
+    }
+    #logo {
+        text-align: center;
+    }
+    #First_Planet {
+        top: 250px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    #P_blur_1 {
+        top: 250px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    #Second_Planet {
+        top: 900px;
+        right: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    #P_blur_2 {
+        top: 900px;
+        right: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    #Third_Planet {
+        top: 1550px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    #P_blur_3 {
+        top: 1550px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    #Fourth_Planet {
+        top: 2200px;
+        right: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    #P_blur_4 {
+        top: 2200px;
+        right: -150px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    p {
+        font-family: Bellota;
+        font-size: 60px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    #basic_web {
+        color: #7EAB2C;
+        line-height: 500px;
+        font-weight: bold;
+        text-align: right;
+    }
+    
+    #ux {
+        display: none;
+    }
+    
+    #ux_m {
+        display: block;
+        color: #FF7C4A;
+        font-weight: bold;
+        position: relative;
+        line-height: 500px;
+    }
+    
+    #anim {
+        line-height: 500px;
+        color: #1D5FF2;
+        font-weight: bold;
+        text-align: right;
+    }
+    
+    #cont_p {
+        line-height: 500px;
+        color: #00C738;
+        font-weight: bold;
+        text-align: left;
+        font-size: 27px
+    }
+}

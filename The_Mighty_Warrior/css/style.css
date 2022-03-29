@@ -1,0 +1,793 @@
+@font-face {
+    font-family: AgencyFB;
+    src: url(AgencyFB.ttf);
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    font-family: "AgencyFB";
+}
+
+#version {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*Game assets*/
+
+#game {
+    position: absolute;
+    left: 10vw;
+    width: 80vw;
+    overflow: hidden;
+}
+
+#background {
+    background-image: url(../Assets/Background.png);
+    background-size: 100%;
+    width: 80vw;
+    height: 45vw;
+}
+
+#game_over {
+    background-image: url(../Assets/Gameover_screen.svg);
+    width: 40vw;
+    height: 22.5vw;
+    position: absolute;
+    top: 10vw;
+    left: 20vw;
+    border: 1px solid black;
+    z-index: -10;
+}
+
+#begin_button {
+    background-image: url(../Assets/Begin_button_animation.svg);
+    background-size: 300%;
+    width: 30vw;
+    height: 5.5vw;
+    position: absolute;
+    bottom: 10vw;
+    left: 25vw;
+}
+
+#start_over_button {
+    position: relative;
+    background-color: #745A5C;
+    border: 1px solid black;
+    color: white;
+    width: 15vw;
+    height: 4.5vw;
+    text-shadow: 2px -2px black;
+    font-size: 4vw;
+    text-align: center;
+    top: 15vw;
+    left: 12.5vw;
+}
+
+#start_over_button:active {
+    text-shadow: 0px 0px;
+}
+
+#clouds {
+    background-image: url(../Assets/cloud.svg);
+    width: 15vw;
+    height: 5.643vw;
+    left: 80vw;
+    top: 7vw;
+    position: relative;
+}
+
+#clouds2 {
+    background-image: url(../Assets/cloud.svg);
+    width: 15vw;
+    height: 5.643vw;
+    left: 80vw;
+    top: 0vw;
+    position: relative;
+}
+
+#clouds3 {
+    background-image: url(../Assets/cloud.svg);
+    width: 15vw;
+    height: 5.643vw;
+    left: 80vw;
+    top: 3vw;
+    position: relative;
+}
+
+#cloudy {
+    background-image: url(../Assets/cloud.svg);
+    width: 15vw;
+    height: 5.643vw;
+    left: -5vw;
+    top: 8vw;
+    position: relative;
+}
+
+#points {
+    margin: 0;
+    color: white;
+    position: absolute;
+    width: 30vw;
+    top: 0vw;
+    left: 48vw;
+    font-family: "AgencyFB";
+    font-size: 3.5vw;
+    text-align: right;
+    text-shadow: 3px -3px black;
+    opacity: 0;
+}
+
+#start_button {
+    position: absolute;
+    background-image: url(../Assets/Start_wave_button.png);
+    width: 16vw;
+    height: 3.68vw;
+    background-size: 100%;
+    top: 30vw;
+    left: 0.6vw;
+    display: none;
+}
+
+#start_button:active {
+    background-image: url(../Assets/Start_wave_clicked.png);
+}
+
+#stop_button {
+    position: absolute;
+    background-image: url(../Assets/Stop_button.png);
+    width: 16vw;
+    height: 3.68vw;
+    background-size: 100%;
+    top: 30vw;
+    left: 0.6vw;
+    display: none;
+}
+
+#stop_button:active {
+    background-image: url(../Assets/Stop_button_pressed.png);
+}
+
+#shop_button {
+    position: absolute;
+    background-image: url(../Assets/Shop_button.png);
+    width: 16vw;
+    height: 3.68vw;
+    background-size: 100%;
+    top: 34.5vw;
+    left: 0.6vw;
+    display: none;
+}
+
+#shop_button:active {
+    background-image: url(../Assets/Shop_clicked.png);
+}
+
+#close_button {
+    position: absolute;
+    background-image: url(../Assets/Shop_close.png);
+    background-size: 100%;
+    width: 16vw;
+    height: 3.68vw;
+    top: 34.5vw;
+    left: 0.6vw;
+    display: none;
+}
+
+#close_button:active {
+    background-image: url(../Assets/Shop_close_pressed.png);
+}
+
+#settings_button {
+    position: absolute;
+    background-image: url(../Assets/Settings_button.png);
+    width: 16vw;
+    height: 3.68vw;
+    background-size: 100%;
+    top: 39vw;
+    left: 0.6vw;
+    z-index: 100;
+    display: none;
+}
+
+#settings_button:active {
+    background-image: url(../Assets/Settings_button_pressed.png);
+}
+
+#close_sett_button {
+    position: absolute;
+    background-image: url(../Assets/Close_sett.png);
+    background-size: 100%;
+    width: 16vw;
+    height: 3.68vw;
+    top: 39vw;
+    left: 0.6vw;
+    display: none;
+    z-index: 100;
+}
+
+#close_sett_button:active {
+    background-image: url(../Assets/Close_sett_pressed.png);
+}
+
+.button {
+    width: 16vw;
+    height: 3.7vw;
+}
+
+#player {
+    background-image: url(../Assets/Head.svg);
+    position: absolute;
+    width: 5.3vw;
+    height: 5.32vw;
+    left: -12vw;
+    top: 6.2vw;
+}
+
+#player_body {
+    background-image: url(../Assets/player_Body.svg);
+    position: absolute;
+    width: 4vw;
+    height: 5.47vw;
+    top: 5.3vw;
+    left: 0.55vw;
+}
+
+#player_legs {
+    background-image: url(../Assets/player_Leg.svg);
+    position: absolute;
+    width: 1.67vw;
+    height: 4.1vw;
+    top: 10.76vw;
+    left: 1.7vw;
+}
+
+#player_hand {
+    background-image: url(../Assets/player_Hand.svg);
+    position: absolute;
+    width: 1vw;
+    height: 4.47vw;
+    top: 5.87vw;
+    left: 2vw;
+}
+
+#player_HP {
+    background: rgb(0,255,0);
+    border: 3px solid black;
+    position: relative;
+    width: 9vw;
+    height: 2.3vw;
+    top: -3.4vw;
+    left: -2.2vw;
+    font-family: "AgencyFB";
+    font-size: 2vw;
+    text-align: center;
+}
+
+#mLeft {
+    margin: 0;
+    position: absolute;
+    width: 80vw;
+    top: 40vw;
+    font-family: "AgencyFB";
+    font-size: 3vw;
+    color: rgb(220, 0 ,0);
+    text-align: center;
+    opacity: 0;
+    z-index: 100;
+}
+
+#shopOpened {
+    margin: 0;
+    position: absolute;
+    width: 80vw;
+    top: 40vw;
+    font-family: "AgencyFB";
+    font-size: 3vw;
+    color: rgb(220, 0 ,0);
+    text-align: center;
+    opacity: 00;
+    z-index: 100;
+}
+
+#hp_gained {
+    margin: 0;
+    position: absolute;
+    width: 80vw;
+    top: 40vw;
+    font-family: "AgencyFB";
+    font-size: 3vw;
+    color: gold;
+    text-align: center;
+    opacity: 00;
+    z-index: 100;
+}
+
+#points_gained {
+    margin: 0;
+    position: absolute;
+    width: 80vw;
+    top: 40vw;
+    font-family: "AgencyFB";
+    font-size: 3vw;
+    color: gold;
+    text-align: center;
+    opacity: 00;
+    z-index: 100;
+}
+
+#weapon_container {
+    position: absolute;
+    width: 8.45vw;
+    height: 5vw;
+    left: 0vw;
+    top: 4vw;
+}
+
+#weapon {
+    background-image: url(../Assets/Weapon_F.svg);
+    width: 8.45vw;
+    height: 5vw;
+}
+
+#spriteRandoBox {
+    background-image: url(../Assets/Good_thing.svg);
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    bottom: -6vw;
+    left: 40vw;
+}
+
+.monster {
+    position: absolute;
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 101;
+}
+
+.mHP {
+    background: rgb(0,255,0);
+    border: 3px solid black;
+    position: relative;
+    width: 6vw;
+    height: 1.2vw;
+    top: -2.8vw;
+    left: -0.6vw;
+    font-family: "AgencyFB";
+    font-size: 1vw;
+    text-align: center;
+}
+
+#sprite1 {
+    background-image: url(../Assets/Bad_thing.svg);
+    width: 5vw;
+    height: 5vw;
+}
+
+#sprite2 {
+    background-image: url(../Assets/Bad_thing.svg);
+    width: 5vw;
+    height: 5vw;
+}
+
+#sprite3 {
+    background-image: url(../Assets/Bad_thing.svg);
+    width: 5vw;
+    height: 5vw;
+}
+
+#sprite4 {
+    background-image: url(../Assets/Bad_thing.svg);
+    width: 5vw;
+    height: 5vw;
+}
+
+#monster_1 {
+    right: -6vw;
+    bottom: 15vw;
+    transform: rotate(12deg);
+}
+
+#monster_2 {
+    right: -6vw;
+    bottom: 25vw;
+    transform: rotate(8deg);
+}
+
+#monster_3 {
+    bottom: 32vw;
+    right: -6vw;
+}
+
+#monster_4 {
+    bottom: -9vw;
+    right: 15vw;
+    transform: rotate(38deg);
+}
+
+#settings {
+    background-image: url(../Assets/Settings_BG.svg);
+    position: absolute;
+    top: 15vw;
+    left: 28vw;
+    width: 30vw;
+    height: 15.4vw;
+    display: none;
+}
+
+#shop {
+    background-image: url(../Assets/Shop_BG.svg);
+    position: absolute;
+    top: 3vw;
+    left: 28vw;
+    width: 30vw;
+    height: 39.22vw;
+    z-index: -1;
+}
+
+#armor_price {
+    font-size: 3vw;
+    color: white;
+    position: relative;
+    top: 8vw;
+    left: 3vw;
+    text-align: left;
+}
+
+#armor_buy {
+    position: relative;
+    background-color: #745A5C;
+    border: 1px solid black;
+    color: white;
+    width: 8vw;
+    height: 4vw;
+    text-shadow: 2px -2px black;
+    font-size: 3vw;
+    text-align: center;
+    top: 4vw;
+    left: 19vw;
+}
+
+#leg_price {
+    font-size: 3vw;
+    color: white;
+    position: relative;
+    top: 15vw;
+    left: 3vw;
+    text-align: left;
+}
+
+#leg_buy {
+    position: relative;
+    background-color: #745A5C;
+    border: 1px solid black;
+    color: white;
+    width: 8vw;
+    height: 4vw;
+    text-shadow: 2px -2px black;
+    font-size: 3vw;
+    text-align: center;
+    top: 11vw;
+    left: 19vw;
+}
+
+#weapon_price {
+    font-size: 3vw;
+    color: white;
+    position: relative;
+    top: 19vw;
+    left: 3vw;
+    text-align: left;
+}
+
+#weapon_buy {
+    position: relative;
+    background-color: #745A5C;
+    border: 1px solid black;
+    color: white;
+    width: 8vw;
+    height: 4vw;
+    text-shadow: 2px -2px black;
+    font-size: 3vw;
+    text-align: center;
+    top: 15vw;
+    left: 19vw;
+}
+
+#armor_buy:active {
+    text-shadow: 0px 0px;
+}
+
+#leg_buy:active {
+    text-shadow: 0px 0px;
+}
+
+#weapon_buy:active {
+    text-shadow: 0px 0px;
+}
+
+/*animations*/
+
+.glow {
+    animation: glow_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+.floating {
+    animation: floating_kf;
+    animation-duration: 6s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.attack {
+    animation: attack_kf;
+    animation-timing-function:linear;
+}
+
+.pAttack {
+    animation: pAttack_kf;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
+}
+
+.disappear {
+    animation: disappear_kf;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+
+.die {
+    animation: dying_kf;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.passing_cloud {
+    animation: pass_kf;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.passing_cloud2 {
+    animation: pass_kf;
+    animation-timing-function: linear;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+}
+
+.passing_cloud3 {
+    animation: pass_kf;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+}
+
+.throw {
+    animation: throw_kf;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-duration: 1.2s;
+    animation-iteration-count: 2;
+}
+
+.disappearRando {
+    animation: disappear_kf;
+    animation-timing-function: linear;
+    animation-duration: 1.2s;
+}
+
+/*keyframes*/
+
+@keyframes glow_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: -300% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes floating_kf {
+    50% {
+        transform: translate(0, 2vw);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes throw_kf {
+    100% {
+        bottom: 25vw;
+        left: 40vw;
+        transform: rotate(245deg);
+    }
+}
+
+@keyframes disappearRando_kf {
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes pass_kf {
+    100% {
+        left: -20vw;
+    }
+}
+
+@keyframes pAttack_kf {
+    50% {
+        transform: rotate(-30deg);
+    }
+    80% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes attack_kf {
+    100% {
+        right: 58vw;
+        bottom: 30vw;
+    }
+}
+
+@keyframes dying_kf {
+    10% {
+        transform: translate(-0.5vw, 0);
+    }
+    30% {
+        transform: translate(0.5vw, 0);
+    }
+    50% {
+        transform: translate(-0.5vw, 0);
+    }
+    70% {
+        transform: translate(0.5vw, 0);
+    }
+    80% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 100vw);
+    }
+/*
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+*/
+}
+
+@keyframes disappear_kf {
+    0% {
+        opacity: 100%;
+    }
+    
+    30% {
+        opacity: 100%;
+    }
+    
+    100% {
+        opacity: 0%;
+    }
+}
+
+
+/*animation_modifiers*/
+
+
+.anim_3 {
+    animation-duration: 3s;
+}
+
+.anim_4 {
+    animation-duration: 4s;
+}
+
+.anim_5 {
+    animation-duration: 5s;
+}
+
+.anim_6 {
+    animation-duration: 6s;
+}
+
+.animdel_1 {
+    animation-delay: 1s;
+}
+
+.animdel_2 {
+    animation-delay: 2s;
+}
+
+.animdel_3 {
+    animation-delay: 3s;
+}
+
+.animdel_4 {
+    animation-delay: 4s;
+}
+
+.animdel_5 {
+    animation-delay: 5s;
+}
+
+
+/*volume*/
+
+#volumeSlider {
+    position: absolute;
+    top: 8vw;
+    left: 7vw;
+    width: 30vw;
+    height: 1vw;
+}
+
+.slider {
+    width: 15vw;
+    height: 1vw;
+}
+
+#muteFX {
+    position: absolute;
+    color: black;
+    font-size: 2.3vw;
+    text-align: center;
+    top: 11.5vw;
+    left: 5vw;
+    border: 2px solid black;
+    width: 7vw;
+    background-color: lawngreen;
+}
+
+#muteBG {
+    position: absolute;
+    color: black;
+    font-size: 2.3vw;
+    text-align: center;
+    top: 11.5vw;
+    left: 14vw;
+    border: 2px solid black;
+    width: 10vw;
+    background-color: lawngreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

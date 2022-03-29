@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The mighty warrior</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div id="game">
+            <div id="background">
+                <div id="clouds" class="passing_cloud"></div>
+                <div id="clouds2" class="passing_cloud2"></div>
+                <div id="clouds3" class="passing_cloud3"></div>
+            </div>
+            <div id="game_elements">
+                <div id="player" class="floating">
+                    <div id="weapon_container" class="floating"><div id="weapon"></div></div>
+                    <div id="player_body"></div>
+                    <div id="player_HP">100</div>
+                    <div id="player_legs"></div>
+                    <div id="player_hand"></div>
+                    <div id="cloudy"></div>
+                </div>
+                <div id="monsters">
+                    <div id="monster_1" class="monster">
+                        <div id="m1HP" class="mHP">100</div>
+                        <div id="sprite1"></div>
+                    </div>
+                    <div id="monster_2" class="monster">
+                        <div id="m2HP" class="mHP">100</div>
+                        <div id="sprite2"></div>
+                    </div>
+                    <div id="monster_3" class="monster">
+                        <div id="m3HP" class="mHP">100</div>
+                        <div id="sprite3"></div>
+                    </div>
+                    <div id="monster_4" class="monster">
+                        <div id="m4HP" class="mHP">100</div>
+                        <div id="sprite4"></div>
+                    </div>
+                </div>
+                <div id="RandoBox">
+                    <div id="spriteRandoBox"></div>
+                </div>
+                <p id="mLeft">You have monsters left!</p>
+                <p id="shopOpened">The shop is open!</p>
+                <p id="hp_gained">HP restored!</p>
+                <p id="points_gained">You gained some points!</p>
+                <p id="points">0 PTS</p>
+            </div>
+            <div id="game_ui">
+                <div id="begin_button" class="button glow"></div>
+                <div id="start_button" class="button"></div>
+                <div id="shop_button" class="button"></div>
+                <div id="stop_button" class="button"></div>
+                <div id="close_button" class="button"></div>
+                <div id="settings_button" class="button"></div>
+                <div id="close_sett_button" class="button"></div>
+                <div id="shop">
+                    <div id="armor_price">PRICE: 200 PTS</div>
+                    <div id="armor_buy">BUY</div>
+                    <div id="leg_price">PRICE: 200 PTS</div>
+                    <div id="leg_buy">BUY</div>
+                    <div id="weapon_price">PRICE: 200 PTS</div>
+                    <div id="weapon_buy">BUY</div>
+                </div>
+                <div id="settings">
+                    <div id="volumeSlider">
+                        <input type="range" min="0" max="100" value="100" class="slider" id="sliderInput">
+                    </div>
+                    <div id="muteFX"><span>MUTE FX</span></div>
+                    <div id="muteBG"><span>MUTE MUSIC</span></div>
+                </div>
+                <div id="game_over">
+                    <div id="start_over_button">RESTART</div>
+                </div>
+            </div>
+            <div id="sounds">
+                <audio id="attack_effect"></audio>
+                <audio id="shop_effect" src="Assets/Sounds/The_shop.mp3"></audio>
+                <audio id="mleft_effect" src="Assets/Sounds/You_have.mp3"></audio>
+                <audio id="game_over_effect" src="Assets/Sounds/game_over.mp3"></audio>
+                <audio id="background_music" loop>
+                    <source src="Assets/Sounds/background.mp3" />
+                </audio>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p id="version">Patch 3.0</p>
+</footer>
+</html>

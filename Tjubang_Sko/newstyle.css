@@ -1,0 +1,632 @@
+/* FONTS */
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: Chelsea Market;
+    src: url(assets/fonts/ChelseaMarket.ttf);
+}
+
+body {font-family: Montserrat;}
+
+* {margin: 0; padding: 0;}
+
+/*NAVIGATION BAR AREA*/
+nav {
+    background: #FAF3DD;
+    width: 100%;
+    height: 88px;
+    position: fixed;
+    box-shadow: 0 0 10px 0;
+    z-index: 1;
+}
+
+.Logo_clean {
+    background-image: url(assets/Logo_clean.png);
+    background-size: 100%;
+    width: 222.109704641px;
+    height: 70px;
+    position: absolute;
+}
+
+#navLogo {
+    left: 10vw;
+    top: 9px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 15vw;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 88px;
+    margin: 0 0 0 60px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #5E6472;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#navig::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #FFA69E;
+    position: absolute;
+    bottom: 25px;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+#active::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #FFA69E;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    transition: all ease-in-out 250ms;
+}
+
+#navig:hover::before {
+    width: 100%;
+}
+
+#phoneNavLogo {display: none;}
+
+.checkbtn {
+    font-size: 30px;
+    color: #5E6472;
+    float: right;
+    line-height: 2.7em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+    z-index: 3;
+    position: relative;
+}
+
+.checkbtn2 {
+    font-size: 35px;
+    color: #5E6472;
+    float: right;
+    line-height: 2.3em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+    z-index: 3;
+    position: relative;
+}
+
+#check {display: none;}
+
+/* MAIN AREA*/
+main {overflow: hidden;}
+
+#vid {
+    display:block;
+    position: relative;
+    width: 1920px;
+    height: auto;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: -1;
+}
+
+#motto {
+    font-family: Chelsea Market;
+    font-size: 83px;
+    color: #FAF3DD;
+    position: relative;
+    top: -670px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    text-shadow: black -4px 4px 7px;
+}
+
+video {
+    position: relative;
+    bottom: 127.5px;
+}
+
+.button_conteiner {
+    width: 100%;
+    position: relative;
+    top: -630px;
+    margin: auto;
+    text-align: center;
+}
+
+.button {
+    background-color: #5E6472;
+    font-family: Montserrat;
+    color: #FAF3DD;
+    width: 465px;
+    height: 70px;
+    margin: auto;
+    font-size: 52px;
+    line-height: 90px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Chelsea Market;
+    text-align: center;
+    color: #5E6472;
+    font-size: 60px;
+    padding: 40px 0 20px 0;
+}
+
+#Tjubang_background {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    top: -400px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #5E6472;
+    margin: 0 5%;
+    padding-bottom: 20px;
+}
+
+#shoe_cont {
+    display: flex;
+}
+
+#Col_h {
+    position: relative;
+    top: -200px;
+}
+
+.square {
+    width: 267px;
+    height: 265px;
+    margin: auto;
+    margin-bottom: 350px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) -3px 3px 20px;
+    position: relative;
+    top: -100px;
+}
+
+.shoes {
+    position: relative;
+    top: -110px;
+    left: -20px;
+    width: 400px;
+}
+
+#first_square {
+    background-color: #FFA69E;
+}
+
+#second_square {
+    background-color: #FAF3DD;
+}
+
+#third_square {
+    background-color: #B8F2E6;
+}
+
+.Name_price {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    top: -100px;
+}
+
+/*CAROUSEL*/
+
+.carousel {
+    background-color: #FAF3DD;
+}
+
+.carousel-cell {
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.carousel-cell img {
+    display: block;
+    height: 800px;
+}
+
+#carouselContainer {
+    position: relative;
+    background-size: 100%;
+    width: 100vw;
+    margin-top: 90px;
+    z-index: 0;
+}
+
+.yellowBg {background-color: #FAF3DD;}
+
+#ownersContainer {
+    margin: 20px auto 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#owner1 {
+    width: 200px;
+    height: 200px;
+    background-color: #B8F2E6;
+}
+
+#owner2 {
+    width: 200px;
+    height: 200px;
+    background-color: #FFA69E;
+}
+
+#owner3 {
+    width: 200px;
+    height: 200px;
+    background-color: #AED9E0;
+}
+
+#owner4 {
+    width: 200px;
+    height: 200px;
+    background-color: #FAF3DD;
+}
+
+#arautoContainer {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+#arIMG {
+    width: 30vw;
+    height: 35vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-image: url(assets/derek-thomson-M1jCmRxO7cY-unsplash.jpg);
+}
+
+.yellowBg2 {
+    background-color: #FAF3DD;
+    height: 100%;
+}
+
+h2 {
+    font-family: Chelsea Market;
+    text-align: center;
+    color: #5E6472;
+    font-size: 60px;
+    padding: 40px 0 20px 0;
+}
+
+.creditA {
+    margin-left: 95px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+/*COLORS*/
+#colorContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.colorPalette {height: 100px; width: 200px;  line-height: 100px;}
+#color1 {background-color: #FFA69E; color: #1A535C; font-weight: bold;}
+#color2 {background-color: #FAF3DD; color: #1A535C; font-weight: bold;}
+#color3 {background-color: #B8F2E6; color: #1A535C; font-weight: bold;}
+#color4 {background-color: #AED9E0; color: #1A535C; font-weight: bold;}
+#color5 {background-color: #5E6472; color: #FAF3DD; font-weight: bold;}
+
+/*TYPOGRAPHY*/
+#titleText {font-family: Chelsea Market;font-size: 80px;}
+#subtitleText {font-family: Chelsea Market; font-size: 2.344vw;}
+#bodyText {font-family: Montserrat; font-size: 20px;}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+/*FOOTER AREA*/
+footer {
+    background-color: #5E6472;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#footer_cont {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin: 40px 0;
+}
+
+#map {
+    height: 300px;
+    width: 450px;
+    display: block;
+}
+
+#info {
+    color: white;
+}
+
+i {font-weight: bold;}
+
+.SoMe_icon {
+    width: 50px;
+    height: 50px;
+}
+
+#FB_icon {
+    background-image: url(assets/SoMe/Icon%20awesome-facebook.png);
+    background-size: 100%;
+}
+
+#IG_icon {
+    background-image: url(assets/SoMe/Icon%20metro-instagram.png);
+    background-size: 100%;
+}
+
+#WP_icon {
+    background-image: url(assets/SoMe/WP_icon.png);
+    background-size: 100%;
+}
+
+.wrap {
+    max-width: 1090px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    margin-top: 200px;
+    border-radius: 8px;
+}
+
+#fullVid {
+    max-width: 1050px;
+    top: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.closeOverlay {
+    position: absolute;
+    top: 100px;
+    right: 45px;
+    font-size: 120px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.closeOverlay:hover {
+    color: #ccc;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width:999px) {
+    .checkbtn {
+        display: block;
+    }
+    
+    .checkbtn2 {
+        display: none;
+    }
+    
+    #check:checked ~ ul {
+        right: 0;
+    }
+    
+    #check:checked ~ .checkbtn{
+        display: none;
+    }
+    
+    #check:checked ~ .checkbtn2{
+        display: block;
+    }
+    
+    .Logo_clean {
+        background-image: url(assets/Logo.png);
+        background-size: 100%;
+        width: 82.5182481753px;
+        height: 70px;
+    }
+    
+    #navLogo {
+        left: 2vw;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #FAF3DD;
+        right: -105%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+    
+    nav ul {
+        margin: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        line-height: 88px;
+        position: relative;
+        margin: 0 10%;
+    }
+    
+    #phoneNavLogo {
+        display: block;
+        position: relative;
+        width: 50%;
+        margin: auto;
+    }
+    
+    #shoe_cont {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -475px;
+    }
+    
+    .square {
+        margin-bottom: 225px;
+    }
+    
+    video {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    #vid {
+        display:block;
+        position: relative;
+        width: 1920px;
+        height: auto;
+        overflow: hidden;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .button_conteiner {
+        top: -975px;
+    }
+    
+    .button {
+        width: 240px;
+        height: 40px;
+        font-size: 34px;
+        line-height: 60px;
+    }
+    
+    #motto {
+        top: -1000px;
+    }
+    
+    #Tjubang_background {
+        top: -900px;
+    }
+    
+    #Col_h {
+        top: -700px;
+    }
+    
+    #ownersContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .owner {
+        margin: 80px auto;
+    }
+    
+    #about_p {
+        margin-bottom: 400px;
+    }
+    
+    footer {
+        position: absolute;
+        margin-top: -300px;
+        height: 800px;
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    
+    #map {
+        top: 40px;
+        left: 0;
+        margin: 0 auto;
+        height: 2500px;
+        width: 350px;
+    }
+    
+    #footer_cont {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #info {
+        text-align: center;
+        margin: auto;
+        margin-top: 60px;
+    }
+    
+    #arautoContainer {
+        display: flex;
+        align-content: center;
+        width: 100%;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    #arIMG {
+        width: 100%;
+        height: 60vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        background-image: url(assets/derek-thomson-M1jCmRxO7cY-unsplash.jpg);
+    }
+    
+    .SoMe_icon {
+        text-align: center;
+        margin: 20px auto;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1200px) {
+    .yellowBg2 {
+        height: 100%;
+    }
+    
+    #arIMG {
+        height: 70vw;
+    }
+}
+
+@media only screen and (min-width:1201px) and (max-width:1500px) {
+    .yellowBg2 {
+        height: 100%;
+    }
+    
+    #arIMG {
+        height: 52vw;
+    }
+}

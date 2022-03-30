@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!--THE MAIN FONT IS MONTSERRAT so if u need to use the other one u have to call it-->
+
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tjubang Sko</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="shortcut icon" href="assets/Logo.png">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label for="check" class="checkbtn2">
+            <i class="fas fa-times"></i>
+        </label>
+        <div class="Logo_clean" id="navLogo"></div>
+        <ul>
+            <li><img id="phoneNavLogo" src="assets/Logo.png"></li>
+            <li><a id="active" href="#">HOME</a></li>
+            <li><a id="navig" href="about.html">ABOUT</a></li>
+            <li><a id="navig" href="design.html">DESIGN</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="vid">
+            <video width="1920" height="1080" autoplay muted loop>
+                <source src="assets/vids/best.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="motto">First Steps Matter</div>
+        <div class="button_conteiner">
+            <p class="button">PLAY</p>
+        </div>
+        <div id="Tjubang_background">
+            <h1 id="BG_h">Tjubang Sko</h1>
+            <p>
+                Tjubang Sko and their friendly, and qualified and friendly staff has been specializing in Arauto Rap footwear for the past years. They strive to give their customers the best buying experience and to become the preferred choice in shoe wear.
+                <br><br>
+                The store strives to provide stock for all kinds of feet: wide, slim, flat feet, etc. which is why they can guarantee that they can find a model that fits your child’s feet perfectly.
+                <br><br>
+                Tjubank Sko constantly supplies their shop with new models and sizes.
+            </p>
+        </div>
+        <div id="Collection_container">
+            <h1 id="Col_h">Collection</h1>
+            <div id="shoe_cont">
+                <div class="square" id="first_square">
+                    <img class="shoes" src="assets/shoes/first.png">
+                    <a href="https://tjubangsko.dk/products/arauto-rap-klassisk-begynder-sandal-nubuck-sort" target="_blank">
+                        <p class="Name_price">
+                            Arauto RAP Klassisk begynder sandal- Nubuck Sort
+                            <br>
+                            440,30 kr
+                        </p>
+                    </a>
+                </div>
+                <div class="square" id="second_square">
+                    <img class="shoes" src="assets/shoes/second.png">
+                    <a href="https://tjubangsko.dk/products/arauto-rap-klassisk-begynder-sandal-chilli" target="_blank">
+                        <p class="Name_price">
+                            Arauto RAP Klassisk begynder sandal- Chilli
+                            <br>
+                            440,30 kr
+                        </p>
+                    </a>
+                </div>
+                <div class="square" id="third_square">
+                    <img class="shoes" src="assets/shoes/third.png">
+                    <a href="https://tjubangsko.dk/collections/baby-sandaler-pige/products/arauto-rap-klassisk-begynder-sandal-green" target="_blank">
+                        <p class="Name_price">
+                            Arauto RAP Klassisk begynder sandal - Green
+                            <br>
+                            440,30 kr
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="videoOverlay" class="overlay">
+            <span class="closeOverlay"> &#215 </span>
+            <div class="wrap">
+                <video id="fullVid" src="assets/vids/best.mp4" controls></video>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_cont">
+            <div id="map"></div>
+            <p id="info">
+                <i>Tjubang Sko</i>
+                <br><br>
+                +45 38 10 24 00
+                <br>
+                info@tjubangsko.dk
+                <br><br>
+                Godthåbsvej 18A
+                <br>
+                2000 Frederiksberg
+            </p>
+            <a class="SoMe_icon" id="FB_icon" href="https://www.facebook.com/TjubangBornesko/" target="_blank"></a>
+            <a class="SoMe_icon" id="IG_icon" href="https://www.instagram.com/tjubangsko/" target="_blank"></a>
+            <a class="SoMe_icon" id="WP_icon" href="https://tjubangsko.dk/" target="_blank"></a>
+        </div>
+    </footer>
+</body>
+<script src="script2.js"></script>
+<script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=getMap&key=Al6SoHSRTUV0XDI6ud8eUhV16dRf1ypDm00yEvh8lFvdEB9cq8y1KtrbdSE8XQcG' async defer></script>
+</html>
